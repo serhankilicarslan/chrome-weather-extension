@@ -1,7 +1,7 @@
 {
   "name": "Hava Durumu Rozeti",
   "description": "Şehrinizin hava durumunu hızlıca görebileceğiniz bir rozet ekler...",
-  "version": "0.1",
+  "version": "0.1.1",
   "manifest_version": 2,
   "homepage_url": "https://github.com/serhankilicarslan/chrome-weather-extension",
   "background": {
