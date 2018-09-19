@@ -15,7 +15,7 @@ function startData(){
 
 function setBadge(degree) {
 	chrome.browserAction.setBadgeText({
-        'text': degree + "°"
+        'text': parseFloat(Math.round(degree * 100) / 100).toFixed(0) + "°"
     });
 }
 
@@ -27,8 +27,8 @@ function getData() {
 	    var resp = JSON.parse(xhr.responseText);
 	    if (resp == null) return;
 		setBadgeColor("black")
-	    store.set('degree', resp.clouds.all.toString());
-	    degree = resp.clouds.all.toString();
+	    store.set('degree', resp.main.temp);
+	    degree = resp.main.temp;
 	    setBadge(degree);
 	  }
 	} 
